@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #27282c;
+  flex-direction: column;
+  gap: 50px;
+}
+.buttone {
+  position: relative;
+  background: #fff;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5;
+}
+.buttone:hover {
+  background: var(--clr);
+  color: var(--clr);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+.buttone:before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+.buttone .buttonespan {
+  position: relative;
+  z-index: 1;
+}
+.buttone .buttonei {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.buttone .buttonei::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+.buttone:hover .buttonei::before {
+  width: 20px;
+  left: 20%;
+}
+.buttone .buttonei::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+.buttone:hover .buttonei::after {
+  width: 20px;
+  left: 80%;
+}
+
+#button-container {
+  text-align: center;
+}
+
+.neon {
+  font-size: 60px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #fff, 0 0 40px rgba(0, 255, 255, 0.5),
+    0 0 80px rgba(0, 255, 255, 0.5), 0 0 90px rgba(0, 255, 255, 0.5);
+}
+
+.container {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  background: #f4f5f4;
+  min-height: 600px;
+  border-radius: 10px 10px 10px 10px;
+  word-wrap: break-word;
+}
+
+.white-box {
+  width: 500px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px 10px 10px 10px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+.featured:before {
+  content: "+";
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 5px;
+  color: #4cb1ff;
+}
